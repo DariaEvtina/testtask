@@ -1,0 +1,139 @@
+/* line 1, ../../../../../Documents/testtask/sass/style.sass */
+header {
+  background-color: #e1e6ef;
+  max-height: 56px;
+  padding: 10px;
+  color: #393f53;
+}
+
+/* line 6, ../../../../../Documents/testtask/sass/style.sass */
+header h1, header .buttons {
+  display: inline;
+}
+
+/* line 8, ../../../../../Documents/testtask/sass/style.sass */
+.buttons {
+  margin-left: 73%;
+}
+
+/* line 10, ../../../../../Documents/testtask/sass/style.sass */
+body {
+  min-height: 972px;
+}
+
+/* line 12, ../../../../../Documents/testtask/sass/style.sass */
+.main-content {
+  display: grid;
+}
+
+/* line 14, ../../../../../Documents/testtask/sass/style.sass */
+.main-content .pages {
+  border: 1px black solid;
+  grid-row: 1;
+  grid-column: 1 / span 3;
+  padding: 10px;
+}
+
+/* line 19, ../../../../../Documents/testtask/sass/style.sass */
+.main-content .pages .col {
+  display: inline;
+}
+
+/* line 21, ../../../../../Documents/testtask/sass/style.sass */
+.main-content .pages .col:nth-child(2) {
+  margin-left: 30%;
+}
+
+/* line 23, ../../../../../Documents/testtask/sass/style.sass */
+.main-content .pages .col:last-child {
+  float: right;
+}
+
+/* line 25, ../../../../../Documents/testtask/sass/style.sass */
+.main-content .customers-table {
+  border: 1px black solid;
+  grid-row: 2 / span 6;
+  grid-column: 1 / span 3;
+  padding: 20px;
+}
+
+/* line 30, ../../../../../Documents/testtask/sass/style.sass */
+.main-content .filters {
+  border: 1px black solid;
+  background-color: #e1e6ef;
+  grid-row: 1 / span 7;
+  grid-column: 4;
+  padding: 15px;
+}
+
+/* line 36, ../../../../../Documents/testtask/sass/style.sass */
+.main-content .filters h2, .main-content .filters input[type=button] {
+  display: inline;
+}
+
+/* line 38, ../../../../../Documents/testtask/sass/style.sass */
+div#alphabet {
+  padding: 10px;
+}
+
+/* line 40, ../../../../../Documents/testtask/sass/style.sass */
+div#alphabet a {
+  padding-left: 2px;
+  padding-right: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #8f949d;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1099px) {
+  /* line 48, ../../../../../Documents/testtask/sass/style.sass */
+  .buttons {
+    margin-left: 69%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  /* line 54, ../../../../../Documents/testtask/sass/style.sass */
+  .main-content .pages .col:nth-child(2) {
+    margin-left: 18%;
+  }
+  /* line 56, ../../../../../Documents/testtask/sass/style.sass */
+  .buttons {
+    margin-left: 63%;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  /* line 59, ../../../../../Documents/testtask/sass/style.sass */
+  .buttons {
+    margin-left: 59%;
+  }
+}
+
+@media screen and (max-width: 779px) {
+  /* line 65, ../../../../../Documents/testtask/sass/style.sass */
+  .main-content .pages .col:nth-child(2) {
+    margin-left: 5%;
+  }
+  /* line 67, ../../../../../Documents/testtask/sass/style.sass */
+  .buttons {
+    margin-left: 53%;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  /* line 70, ../../../../../Documents/testtask/sass/style.sass */
+  .buttons {
+    margin-left: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* line 73, ../../../../../Documents/testtask/sass/style.sass */
+  .buttons {
+    margin-left: 33%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

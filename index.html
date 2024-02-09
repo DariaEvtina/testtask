@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+  </head>
+  <header>
+      <h1>Invoices</h1>
+    <div class="buttons" >
+      <input type="button" value="Export"> <input type="button" value="New"><button>filtr</button> <button>...</button>
+    </div>
+  </header>
+  <body>
+    <div class="main-content">
+        <div class="pages">
+          <div class="col" align="center">            
+            <label for="p-result">result per page</label>
+            <select id="p-result">
+                <option>10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+                <option>50</option>
+            </select>
+          </div>
+          <div class="col">            
+            <input type="button" value="<">
+            <span>1</span>
+            <input type="button" value=">">
+          </div>
+          <div class="col" align="right">
+            <label for="page">page</label>
+            <select id="page">
+              <option>10</option>
+              <option>20</option>
+              <option>30</option>
+              <option>40</option>
+              <option>50</option>
+          </select>
+          </div>
+        </div>
+        <div class="customers-table">
+            <table>
+                <tr><th>Type</th><th>Customer</th><th>Location</th><th>Total</th></tr>
+                <tr><td>Receipt #723469</td><td>Anon</td><td>Tallinn</td><td>in progress</td><td>129$</td></tr>
+            </table>
+        </div>
+        <div class="filters">
+            <h2>Customers</h2> <input type="button" value="add"><br>
+            <div id="alphabet" > <script>addletters();</script></div>
+            <br>
+            <input type="text">
+            <input type="submit" value="search"><br>
+            <ul>
+                <li>Marathon oil corp.</li>
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>
