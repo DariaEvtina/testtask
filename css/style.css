@@ -1,4 +1,12 @@
-/* line 1, ../../../../../Documents/testtask/sass/style.sass */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+* p, * a, * td {
+  font-size: 15px;
+}
+
 header {
   background-color: #e1e6ef;
   max-height: 56px;
@@ -6,77 +14,201 @@ header {
   color: #393f53;
 }
 
-/* line 6, ../../../../../Documents/testtask/sass/style.sass */
 header h1, header .buttons {
   display: inline;
 }
 
-/* line 8, ../../../../../Documents/testtask/sass/style.sass */
-.buttons {
-  margin-left: 73%;
+.btn {
+  margin-left: 5px;
+  padding: 6px;
+  padding-right: 10px;
+  background-color: #f1f3f9;
+  border: none;
+  border-radius: 5px;
 }
 
-/* line 10, ../../../../../Documents/testtask/sass/style.sass */
+.btn p, .btn span {
+  display: inline;
+}
+
+.btn p {
+  vertical-align: 23%;
+  margin-left: -19px;
+}
+
+input[type=text], select {
+  border: 1px solid #bdc2cb;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+label {
+  padding: 5px;
+}
+
+span#num {
+  padding: 8px;
+}
+
+.buttons {
+  margin-left: 60%;
+}
+
+.new {
+  margin-left: 3px;
+  padding: 6px;
+  background-color: #5abc7a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+.new p, .new span {
+  display: inline;
+}
+
+.new p {
+  margin-left: -19px;
+  vertical-align: 23%;
+}
+
+.new span {
+  color: white;
+}
+
+.code {
+  font-size: 10px;
+}
+
+.inprogress {
+  background-color: #e7f1fe;
+  padding: 5px;
+  border-radius: 5px;
+  color: #006fe9;
+  text-transform: uppercase;
+  font-size: 12px;
+  max-width: 200px;
+}
+
+.pending-complete {
+  background-color: #f9fafd;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  max-width: 200px;
+}
+
+.success {
+  background-color: #f0fef5;
+  padding: 5px;
+  border-radius: 5px;
+  color: #5abc7a;
+  text-transform: uppercase;
+  font-size: 12px;
+  max-width: 200px;
+}
+
+.unpaid {
+  background-color: #ffeeec;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #e36d56;
+  text-transform: uppercase;
+  font-size: 12px;
+  max-width: 200px;
+}
+
+.search {
+  font-size: 16px;
+  background-color: #e7f1fe;
+  padding: 6px;
+  color: #006fe9;
+  border: 1px #006fe9 solid;
+  border-radius: 5px;
+}
+
+.search p, .search span {
+  display: inline;
+}
+
+.search p {
+  vertical-align: 10%;
+  padding: 4px;
+}
+
+.addcustomers {
+  padding: 25px;
+  background-color: #e1e6ef;
+}
+
+.addcustomers span {
+  float: right;
+}
+
 body {
   min-height: 972px;
 }
 
-/* line 12, ../../../../../Documents/testtask/sass/style.sass */
 .main-content {
   display: grid;
 }
 
-/* line 14, ../../../../../Documents/testtask/sass/style.sass */
 .main-content .pages {
-  border: 1px black solid;
   grid-row: 1;
   grid-column: 1 / span 3;
   padding: 10px;
 }
 
-/* line 19, ../../../../../Documents/testtask/sass/style.sass */
 .main-content .pages .col {
   display: inline;
 }
 
-/* line 21, ../../../../../Documents/testtask/sass/style.sass */
 .main-content .pages .col:nth-child(2) {
   margin-left: 30%;
 }
 
-/* line 23, ../../../../../Documents/testtask/sass/style.sass */
 .main-content .pages .col:last-child {
   float: right;
 }
 
-/* line 25, ../../../../../Documents/testtask/sass/style.sass */
 .main-content .customers-table {
-  border: 1px black solid;
   grid-row: 2 / span 6;
   grid-column: 1 / span 3;
-  padding: 20px;
 }
 
-/* line 30, ../../../../../Documents/testtask/sass/style.sass */
+.main-content .customers-table .etc2 span {
+  text-align: left;
+  display: none;
+  cursor: pointer;
+}
+
+.main-content .customers-table .etc {
+  cursor: pointer;
+}
+
 .main-content .filters {
-  border: 1px black solid;
-  background-color: #e1e6ef;
+  background-color: #f9fafd;
   grid-row: 1 / span 7;
   grid-column: 4;
   padding: 15px;
 }
 
-/* line 36, ../../../../../Documents/testtask/sass/style.sass */
+.main-content .filters ul li::marker {
+  color: #e1e6ef;
+}
+
 .main-content .filters h2, .main-content .filters input[type=button] {
   display: inline;
 }
 
-/* line 38, ../../../../../Documents/testtask/sass/style.sass */
 div#alphabet {
   padding: 10px;
 }
 
-/* line 40, ../../../../../Documents/testtask/sass/style.sass */
 div#alphabet a {
   padding-left: 2px;
   padding-right: 2px;
@@ -86,54 +218,112 @@ div#alphabet a {
   font-size: 15px;
 }
 
-@media screen and (max-width: 1099px) {
-  /* line 48, ../../../../../Documents/testtask/sass/style.sass */
-  .buttons {
-    margin-left: 69%;
-  }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
 }
 
-@media screen and (max-width: 970px) {
-  /* line 54, ../../../../../Documents/testtask/sass/style.sass */
-  .main-content .pages .col:nth-child(2) {
-    margin-left: 18%;
-  }
-  /* line 56, ../../../../../Documents/testtask/sass/style.sass */
-  .buttons {
-    margin-left: 63%;
-  }
+table th, table td {
+  text-align: left;
+  padding: 15px;
 }
 
-@media screen and (max-width: 870px) {
-  /* line 59, ../../../../../Documents/testtask/sass/style.sass */
-  .buttons {
-    margin-left: 59%;
-  }
+table th {
+  color: black;
+  background-color: #f1f3f9;
 }
 
-@media screen and (max-width: 779px) {
-  /* line 65, ../../../../../Documents/testtask/sass/style.sass */
-  .main-content .pages .col:nth-child(2) {
-    margin-left: 5%;
-  }
-  /* line 67, ../../../../../Documents/testtask/sass/style.sass */
+table td {
+  border-bottom: 2px solid #f1f3f9;
+}
+
+input[type="checkbox"]:checked ~ tr {
+  background-color: #e7f1fe;
+}
+
+@media screen and (max-width: 1150px) {
   .buttons {
     margin-left: 53%;
   }
 }
 
-@media screen and (max-width: 690px) {
-  /* line 70, ../../../../../Documents/testtask/sass/style.sass */
+@media screen and (max-width: 990px) {
+  .main-content {
+    display: block;
+  }
+  .main-content .pages .col:nth-child(2) {
+    margin-left: 30%;
+  }
+  .buttons {
+    margin-left: 50%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .buttons {
+    margin-left: 43%;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .main-content .pages .col:nth-child(2) {
+    margin-left: 15%;
+  }
   .buttons {
     margin-left: 40%;
   }
 }
 
-@media screen and (max-width: 600px) {
-  /* line 73, ../../../../../Documents/testtask/sass/style.sass */
+@media screen and (max-width: 710px) {
   .buttons {
-    margin-left: 33%;
+    margin-left: 27%;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 648px) {
+  .buttons {
+    margin-left: 12%;
+  }
+  .main-content .customers-table .etc2 input[type=checkbox], .main-content .customers-table .etc2 span {
+    display: inline;
+  }
+  .main-content .customers-table .etc2 span {
+    margin-right: 82%;
+  }
+  .main-content .customers-table .etc {
+    display: none;
+  }
+  .main-content .customers-table table {
+    border: none;
+  }
+  .main-content .customers-table table th {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    display: none;
+  }
+  .main-content .customers-table table tr {
+    margin: 20px;
+    border: 2px solid #e1e6ef;
+    border-radius: 4px;
+    display: block;
+    background-color: #fff;
+  }
+  .main-content .customers-table table tr td {
+    padding: 10px;
+    display: block;
+    text-align: right;
+  }
+  .main-content .customers-table table tr td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

@@ -5,19 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="./js/script.js"></script>
   </head>
   <header>
       <h1>Invoices</h1>
     <div class="buttons" >
-      <input type="button" value="Export"> <input type="button" value="New"><button>filtr</button> <button>...</button>
+      <button class="btn"><span class="material-symbols-outlined">
+        upgrade
+        </span> <p>Export</p></button> <button class="new"><span class="material-symbols-outlined">
+        Add
+        </span> <p>New</p></button><button class="btn"><span class="material-symbols-outlined">filter_alt</span></button><button class="btn"><span class="material-symbols-outlined">more_vert</span></button>
     </div>
   </header>
   <body>
     <div class="main-content">
         <div class="pages">
           <div class="col" align="center">            
-            <label for="p-result">result per page</label>
+            <label for="p-result">Result per page</label>
             <select id="p-result">
                 <option>10</option>
                 <option>20</option>
@@ -27,12 +32,12 @@
             </select>
           </div>
           <div class="col">            
-            <input type="button" value="<">
-            <span>1</span>
-            <input type="button" value=">">
+            <input type="button" value="<" class="btn">
+            <span id="num">1</span>
+            <input type="button" value=">" class="btn">
           </div>
           <div class="col" align="right">
-            <label for="page">page</label>
+            <label for="page"> Page</label>
             <select id="page">
               <option>10</option>
               <option>20</option>
@@ -44,27 +49,108 @@
         </div>
         <div class="customers-table">
             <table>
-                <tr>
-                  <th>Type</th><th>Customer</th><th>Location</th><th>Total</th>
+                <tr class="etc">
+                  <th><input type="checkbox"></th><th>Type</th><th>Date</th><th>Customer</th><th>Location</th><th>State</th><th>Total</th><th> </th>
                 </tr>
                 <tr>
-                  <td>Receipt #723469</td>
-                  <td>Anon</td>
-                  <td>Tallinn</td>
-                  <td>in progress</td>
-                  <td>129$</td>
+                  <td> <div class="etc2"><span class="material-symbols-outlined">
+                    more_vert
+                </span><input type="checkbox"></div></td>
+                  <td data-label="Type">Receipt <p class="code">#723469</p></td>
+                  <td data-label="Date">21.10.2022</td>
+                  <td data-label="Customer">Anon</td>
+                  <td data-label="Location">Tallinn</td>
+                  <td data-label="State"><span class="inprogress"> • in progress</span></td>
+                  <td data-label="Total">129 $</td>
+                  <td class="etc"><span class="material-symbols-outlined">
+                    more_vert
+                </span></td>
+                </tr>
+                <tr>
+                  <td> <div class="etc2"><span class="material-symbols-outlined">
+                    more_vert
+                </span><input type="checkbox"></div></td>
+                  <td data-label="Type">Receipt <span class="code">#732469</span></td>
+                  <td data-label="Date">21.10.2022<br><span class="unpaid">Due 2 days ago</span></td>
+                  <td data-label="Customer">Anon</td>
+                  <td data-label="Location">Tallinn</td>
+                  <td data-label="State"><span class="pending-complete"> • pending</span></td>
+                  <td data-label="Total">129 $</td>
+                  <td class="etc"><span class="material-symbols-outlined">
+                    more_vert
+                </span></td>
+                </tr>
+                <tr>
+                  <td> <div class="etc2"><span class="material-symbols-outlined">
+                    more_vert
+                </span><input type="checkbox"></div></td>
+                  <td data-label="Type">Receipt <p class="code">#7233249</p></td>
+                  <td data-label="Date">21.10.2022
+                  </td>
+                  <td data-label="Customer">Anon</td>
+                  <td data-label="Location">Tallinn</td>
+                  <td data-label="State"><span class="pending-complete"> • complete</span></td>
+                  <td data-label="Total">129 $</td>
+                  <td class="etc"><span class="material-symbols-outlined">
+                    more_vert
+                </span></td>
+                </tr>
+                <tr>
+                  <td> <div class="etc2"><span class="material-symbols-outlined">
+                    more_vert
+                </span><input type="checkbox"></div></td>
+                  <td data-label="Type">Receipt <p class="code">#7233249</p></td>
+                  <td data-label="Date">21.10.2022</td>
+                  <td data-label="Customer">Anon</td>
+                  <td data-label="Location">Tallinn</td>
+                  <td data-label="State"><span class="success"> • success</span></td>
+                  <td data-label="Total">129 $</td>
+                  <td class="etc"><span class="material-symbols-outlined">
+                    more_vert
+                </span></td>
+                </tr>
+                <tr>
+                  <td><div class="etc2"><span class="material-symbols-outlined">
+                    more_vert
+                </span><input type="checkbox"></div></td>
+                  <td data-label="Type">Receipt <p class="code">#7244369</p></td>
+                  <td data-label="Date">21.10.2022</td>
+                  <td data-label="Customer">Anon</td>
+                  <td data-label="Location">Tallinn</td>
+                  <td data-label="State"><span class="inprogress"> • in progress</span></td>
+                  <td data-label="Total">129 $<br><span class="unpaid">unpaid 200.29 $</span></td>
+                  <td class="etc"><span class="material-symbols-outlined">
+                    more_vert
+                </span></td>
                 </tr>
             </table>
         </div>
         <div class="filters">
-            <h2>Customers</h2> <input type="button" value="add"><br>
+            <h2>Customers</h2> <button class="btn"><span class="material-symbols-outlined">
+              person_add
+              </span> <p>Add</p></button><br>
             <div id="alphabet" > <script>addletters();</script></div>
             <br>
             <input type="text">
-            <input type="submit" value="search"><br>
+            <input type="submit" value="search" class="search"><br>
             <ul>
                 <li>Marathon oil corp.</li>
+                <li>Marathon oil corp.</li>
+                <li>Marathon oil corp.</li>
+                <li>Marathon oil corp.</li>
+                <li>Marathon oil corp.</li>
+                <li>Marathon oil corp.</li>
+                <li>Marathon oil corp.</li>
             </ul>
+            <div class="addcustomers">
+              <h2>Add customers</h2><span class="material-symbols-outlined">
+                close
+                </span>
+              <p>You can add customers by pessing the Add + button in the corner or by importing your clients from a CSV file</p>
+              <button class="search"> <p>Import customers</p><span class="material-symbols-outlined">
+                cloud_upload
+                </span></button>
+            </div>
         </div>
     </div>
   </body>

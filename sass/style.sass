@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*
+    p,a,td
+        font-size: 15px
+    font-family: 'Roboto', sans-serif
 header
     background-color: #e1e6ef
     max-height: 56px
@@ -5,14 +11,102 @@ header
     color: #393f53
     h1, .buttons
         display: inline
+.btn
+    margin-left: 5px
+    padding: 6px
+    padding-right: 10px
+    background-color: #f1f3f9
+    border: none
+    border-radius: 5px
+    p,span
+        display: inline
+    p
+        vertical-align: 23%
+        margin-left: -19px
+input[type=text],select
+    border: 1px solid #bdc2cb
+    padding: 6px
+    border-radius: 5px
+label
+    padding: 5px
+span#num
+    padding: 8px
 .buttons
-        margin-left: 73%
+    margin-left: 60%
+
+
+.new
+    margin-left: 3px
+    padding: 6px
+    background-color: #5abc7a
+    color: white
+    border: none
+    border-radius: 5px
+    padding-right: 10px
+    p,span
+        display: inline
+    p
+        margin-left: -19px
+        vertical-align: 23%
+    span
+        color: white  
+.code
+    font-size: 10px
+.inprogress
+    background-color: #e7f1fe
+    padding: 5px
+    border-radius: 5px
+    color: #006fe9 
+    text-transform: uppercase
+    font-size: 12px
+    max-width: 200px
+.pending-complete
+    background-color: #f9fafd
+    padding: 5px
+    border-radius: 5px
+    color: black
+    text-transform: uppercase
+    font-size: 12px
+    max-width: 200px
+.success
+    background-color: #f0fef5
+    padding: 5px
+    border-radius: 5px
+    color: #5abc7a
+    text-transform: uppercase
+    font-size: 12px
+    max-width: 200px
+.unpaid
+    background-color: #ffeeec
+    margin-top: 5px
+    padding: 5px
+    border-radius: 5px
+    color: #e36d56
+    text-transform: uppercase
+    font-size: 12px
+    max-width: 200px
+.search
+    font-size: 16px
+    background-color: #e7f1fe
+    padding: 6px
+    color: #006fe9 
+    border: 1px #006fe9 solid
+    border-radius: 5px
+    p,span
+        display: inline
+    p
+        vertical-align: 10%
+        padding: 4px
+.addcustomers
+    padding: 25px
+    background-color: #e1e6ef
+    span
+        float: right
 body
     min-height: 972px
 .main-content
     display: grid
     .pages
-        border: 1px black solid
         grid-row: 1
         grid-column: 1 / span 3
         padding: 10px
@@ -23,16 +117,23 @@ body
             &:last-child
                 float: right
     .customers-table
-        border: 1px black solid
         grid-row: 2 / span 6
         grid-column: 1 / span 3
-        padding: 20px
+        .etc2
+            span
+                text-align: left
+                display: none
+                cursor: pointer
+        .etc
+            cursor: pointer
     .filters
-        border: 1px black solid
-        background-color: #e1e6ef
+        background-color: #f9fafd
         grid-row: 1 / span 7
         grid-column: 4
         padding: 15px
+        ul
+            li::marker
+                color: #e1e6ef
         h2,input[type=button]
             display: inline
 div#alphabet
@@ -44,31 +145,85 @@ div#alphabet
         text-decoration: none
         color: #8f949d
         font-size: 15px
-@media screen and (max-width: 1099px)
-    .buttons
-        margin-left: 69%
-@media screen and (max-width: 970px)
-    .main-content
-        .pages
-            .col
-                &:nth-child(2)
-                    margin-left: 18%
-    .buttons
-        margin-left: 63%
-@media screen and (max-width: 870px)
-    .buttons
-        margin-left: 59%
-@media screen and (max-width: 779px)
-    .main-content
-        .pages
-            .col
-                &:nth-child(2)
-                    margin-left: 5%
+
+table
+    border-collapse: collapse
+    width: 100%
+    background-color: #ffffff
+    th,td
+        text-align: left
+        padding: 15px
+    th
+        color: black
+        background-color: #f1f3f9
+    td
+        border-bottom: 2px solid #f1f3f9
+input[type="checkbox"]:checked ~ tr
+    background-color: #e7f1fe
+@media screen and (max-width: 1150px)
     .buttons
         margin-left: 53%
-@media screen and (max-width: 690px)
+@media screen and (max-width: 990px)
+    .main-content
+        display: block
+        .pages
+            .col
+                &:nth-child(2)
+                    margin-left: 30%
+    .buttons
+        margin-left: 50%
+@media screen and (max-width: 890px)
+    .buttons
+        margin-left: 43%
+@media screen and (max-width: 799px)
+    .main-content
+        .pages
+            .col
+                &:nth-child(2)
+                    margin-left: 15%
     .buttons
         margin-left: 40%
-@media screen and (max-width: 600px)
+@media screen and (max-width: 710px)
     .buttons
-        margin-left: 33%
+        margin-left: 27%
+@media screen and (max-width: 648px)
+    .buttons
+        margin-left: 12%
+    .main-content
+        .customers-table
+            .etc2
+                input[type=checkbox], span
+                    display: inline
+                span
+                    margin-right: 82%
+            .etc
+                display: none
+            table
+                border: none
+                th
+                    border: none
+                    clip: rect(0 0 0 0)
+                    height: 1px
+                    margin: -1px
+                    overflow: hidden
+                    padding: 0
+                    position: absolute
+                    width: 1px
+                    display: none
+
+                tr
+                    margin: 20px
+                    border: 2px solid #e1e6ef
+                    border-radius: 4px
+                    display: block
+                    background-color: #fff
+                    td
+                        padding: 10px
+                        display: block
+                        text-align: right
+            
+                        &::before 
+                            content: attr(data-label)
+                            float: left
+                            font-weight: bold
+                            text-transform: uppercase
